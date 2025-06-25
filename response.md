@@ -7,8 +7,8 @@ section .text
 _start:
         ;use this space for the main body of your program
         ;======== write your code below ===========
-        mov eax, var1
-        mov ebx, var2
+        mov eax, [var1]
+        mov ebx, [var2]
         add eax, ebx
         mov [result], eax
 
@@ -20,8 +20,8 @@ _start:
 
 segment .bss
         ;use this space for uninitialized variable (result)
-        result RESB 1
+        result RESD 1
 section .data
         ;use this space for initialized variables (var1 and var2)
-        var1 EQU 10
-        var2 EQU 15
+        var1 dd 10
+        var2 dd 15
