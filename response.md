@@ -1,5 +1,5 @@
 1. First, I copied the code and edited it in the text editor. I then assigned the assigned vartiables to 10 and 15. For the unassigned variables, I tell how nmuch data it needs. For writing the code, I move the first variable to eax 1, and the second to eax 1. I then perform the addition between eax and ebx. The sum will be at eax.
-2. Some challenges in the lab were using first db and realized that it used the memory address instead of the actual value so then I used equ.
+2. Some challenges in the lab were using first db and then changing to constants using equ because I didn't realize that moving into EAX from an address will copy 32 bit which incluce both variables. It took me a few days to realize that I need to declare te variables as dd or I need to move my DB variables into AL. Not EAX.
 3. code:
 section .text
         global _start
